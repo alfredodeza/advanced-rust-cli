@@ -1,10 +1,18 @@
-# Rust CLI Example
+# Advanced Rust CLI Example
 
 A small Rust CLI example you can use to build on. With an emphasis on Linux and creating automation tools that solve a problem for you. This is the basis for DevOps principles that you can apply in your own environment as well as production environments for automating tasks and making your an efficient engineer.
 
 This repository is *Codespaces ready*, and it is set as a template repository. You can create a new repository from this template and start working on your own with Codespaces. This means that Rust, Copilot, and all the extensions are already installed and configured for you.
 
 💡 Are you just looking for a 👉 [Rust template](https://github.com/alfredodeza/rust-template) to get started easily with a project? The [template](https://github.com/alfredodeza/rust-template) has everything you need!
+
+This repository is part of the Python and Rust CLI tools course:
+
+- [1: Resources](https://github.com/alfredodeza/python-and-rust-tools) 
+- [2: Python CLI](https://github.com/alfredodeza/python-cli-example)
+- [3: Rust CLI](https://github.com/alfredodeza/rust-cli-example)
+- [4: Python Advanced CLI](https://github.com/alfredodeza/advanced-python-cli)
+- [5: Rust Advanced CLI](https://github.com/alfredodeza/advanced-rust-cli) 👈 You are here!
 
 🚀 **Watch the Video course**
 
