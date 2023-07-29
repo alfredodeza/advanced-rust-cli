@@ -1,14 +1,43 @@
 # Rust CLI Example
 
-A small Rust CLI example you can use to build on. With an emphasis on Linux and creating automation tools that solve a problem for you. This is the basis for DevOps principles that you can apply in day-to-day work.
+A small Rust CLI example you can use to build on. With an emphasis on Linux and creating automation tools that solve a problem for you. This is the basis for DevOps principles that you can apply in your own environment as well as production environments for automating tasks and making your an efficient engineer.
 
-## Setting up your environment
-Rust development requires certain tools to be installed on your system. The easiest way to do this is to use the [rustup](https://rustup.rs/) tool. This will install the Rust compiler and Cargo, the Rust package manager. Although you can install it in Linux using the package manager, I recommend using `rustup`. Use the following command or go through the [rustup.rs](https://rustup.rs/) website to install it.
+This repository is *Codespaces ready*, and it is set as a template repository. You can create a new repository from this template and start working on your own with Codespaces. This means that Rust, Copilot, and all the extensions are already installed and configured for you.
 
-```bash
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-```
+💡 Are you just looking for a 👉 [Rust template](https://github.com/alfredodeza/rust-template) to get started easily with a project? The [template](https://github.com/alfredodeza/rust-template) has everything you need!
 
+🚀 **Watch the Video course**
+
+[![O'Reilly](https://learning.oreilly.com/covers/urn:orm:video:28037639VIDEOPAIML/400w/)](https://learning.oreilly.com/videos/devops-command-line-tools/28037639VIDEOPAIML/ "Python and Rust CLI tools")
+
+## Contents
+This week has several examples located in the [./examples](./examples) directory. Make sure you have Rust installed and you are using [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-0000-alfredodeza).
+
+This repository is *Codespaces ready*, and it is set as a template repository. You can create a new repository from this template and start working on your own with Codespaces. This means that Rust, Copilot, and all the extensions are already installed and configured for you.
+
+These are all the tools and editor extensions recommended for Python development:
+
+- [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-0000-alfredodeza)
+- [Python extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-python.python&WT.mc_id=academic-0000-alfredodeza)
+- [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot&WT.mc_id=academic-0000-alfredodeza)
+
+### Lesson 1: Developing comples Command-line tools
+- [Adding Sub-commands]()
+- [Parsing complex arguments]()
+- [Adding environment variables]()
+
+### Lesson 2: Packaging and distributing your tool
+- [Creating a Package]()
+
+### Lesson 3: Logging and error handling strategies
+- [Basic Logging]()
+- [Adding different types of logging]()
+- [Handling errors]()
+  
+### Lesson 4: Practice Lab
+Use the [included practice lab](./lab.md) to apply the content you've learned in this week. Follow the steps to create your own repository and apply the requirements to complete the lab.
+
+## Course recommendations
 This repository and video course focuses on the development side of command-line tools in Rust. It uses [Visual Studio Code](https://code.visualstudio.com/?WT.mc_id=academic-0000-alfredodeza) as the editor of choice. You can use any editor you like, but the instructions in this repository will be for VS Code.
 
 These are all the tools and editor extensions I recommend you install to get started:
