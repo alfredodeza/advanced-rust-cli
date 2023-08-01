@@ -1,25 +1,36 @@
-use clap::{Command, Arg};
-use clap::ColorChoice;
+use clap::Parser;
 use blkrs::run_lsblk;
 
-fn main() {
-    let matches = Command::new("lsblk")
-        .version("0.0.1")
-        .author("Alfredo Deza")
-        .about("lsblk in Rust")
-        .color(ColorChoice::Always)
-        .arg(
-            Arg::new("device")
-                .help("Device to query")
-                .required(true)
-                .index(1)
-        )
-        .get_matches();
+#[derive(Parser)]
+#[command(
+    version = "0.0.1",
+    author = "Alfredo Deza",
+    about = "lsblk in Rust"
+)]
+struct Opts {
+    #[clap(subcommand)]
+    cmd: Command,
+}
 
-    if let Some(device) = matches.get_one::<String>("device") {
-        let output = serde_json::to_string(&run_lsblk(&device)).unwrap();
-        println!("{}", output);
-    } else {
-        println!("No device provided");
+#[derive(Parser)]
+enum Command {
+    #[clap(name="part", about = "get info about a device")]
+    Info(InfoOpts),
+}
+
+#[derive(Parser)]
+struct InfoOpts {
+    #[clap(help = "device to get info about")]
+    device: String,
+}
+
+fn main() {
+    let opts = Opts::parse();
+    match opts.cmd {
+        Command::Info(info) => {
+            let device = info.device;
+            let output = run_lsblk(&device);
+            println!("{}", output);
+        }
     }
 }

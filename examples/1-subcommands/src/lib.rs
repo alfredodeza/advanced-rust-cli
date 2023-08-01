@@ -20,7 +20,7 @@ fn run_command(command: &str) -> String {
 }
 
 pub fn run_lsblk(device: &str) -> serde_json::Value {
-    let command = "llsblk -J -o NAME,SIZE,TYPE,MOUNTPOINT";
+    let command = "lsblk -J -o NAME,SIZE,TYPE,MOUNTPOINT";
     let output = run_command(command);
     if output.is_empty() {
         return serde_json::json!({});
