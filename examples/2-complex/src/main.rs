@@ -2,13 +2,18 @@ use clap::{Parser, ArgAction};
 use blkrs::run_lsblk;
 
 #[derive(Parser)]
-#[command(name = "lsblk", version = "0.0.1", author = "Alfredo Deza", about = "lsblk in Rust")]
+#[command(
+    version = "0.0.1",
+    author = "Alfredo Deza",
+    about = "lsblk in Rust"
+)]
 struct Opts {
+
+    #[clap(short, long, help = "Provide better output for debugging purposes", default_value_t = false)]
+    debug: bool,
+
     #[clap(short, long, action = ArgAction::Count)]
     verbose_level: u8,
-
-    #[clap(short, long)]
-    debug: bool,
 
     #[clap(subcommand)]
     cmd: Command,
@@ -16,43 +21,29 @@ struct Opts {
 
 #[derive(Parser)]
 enum Command {
-    #[clap(name = "info", about = "Get information about a device")]
+    #[clap(name="info", about = "get info about a device")]
     Info(InfoOpts),
 }
 
 #[derive(Parser)]
 struct InfoOpts {
-    #[clap(help = "Device to query")]
+    #[clap(help = "device to get info about")]
     device: String,
 }
 
 fn main() {
     let opts = Opts::parse();
-
-    // Example usage of the global flags
-    if opts.debug {
-        println!("Debug mode enabled");
+    println!("{:?}", opts.debug);
+    match opts.verbose_level {
+        0 => println!("no verbosity"),
+        1 => println!("some verbosity"),
+        2 => println!("more verbosity"),
+        _ => println!("too much verbosity"),
     }
-
     match opts.cmd {
-        Command::Info(info_opts) => {
-            // Example usage of the verbosity level
-            match opts.verbose_level {
-                0 => {
-                    // Quiet mode
-                }
-                1 => {
-                    println!("Running in verbose mode level 1");
-                }
-                2 => {
-                    println!("Running in verbose mode level 2");
-                }
-                3 | _ => {
-                    println!("Running in verbose mode level 3");
-                }
-            }
-
-            let output = serde_json::to_string(&run_lsblk(&info_opts.device)).unwrap();
+        Command::Info(info) => {
+            let device = info.device;
+            let output = run_lsblk(&device);
             println!("{}", output);
         }
     }
