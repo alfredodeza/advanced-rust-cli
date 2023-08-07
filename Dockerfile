@@ -7,17 +7,14 @@ WORKDIR /app
 # Copy the Cargo.toml and Cargo.lock files to the container
 COPY Cargo.toml Cargo.lock ./
 
-# Build the dependencies
-RUN cargo build --release
-
 # Copy the source code to the container
 COPY src ./src
 
-# Build the application
+# Build the dependencies
 RUN cargo build --release
 
 # Set the entrypoint to the binary
-ENTRYPOINT ["./target/release/your-cli-tool"]
+ENTRYPOINT ["./target/release/blkrs"]
 
 # Set the default command to --help
 CMD ["--help"]
