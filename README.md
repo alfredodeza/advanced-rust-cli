@@ -38,9 +38,9 @@ These are all the tools and editor extensions recommended for Python development
 - [Creating a Package](./examples/4-package)
 
 ### Lesson 3: Logging and error handling strategies
-- [Basic Logging]()
-- [Adding different types of logging]()
-- [Handling errors]()
+- [Basic Logging](./examples/5-basic-logging)
+- [Adding different types of logging](./examples/6-file-logging)
+- [Handling errors](./examples/7-errors)
   
 ### Lesson 4: Practice Lab
 Use the [included practice lab](./lab.md) to apply the content you've learned in this week. Follow the steps to create your own repository and apply the requirements to complete the lab.
@@ -64,8 +64,6 @@ As part of your development workflow, I highly suggest you use the following pro
 
 ## Resources
 Explore additional content that you can use to learn more about the topics covered in this course.
-
-- [Releasing](./resources/releasing.md)
 
 **Coursera Courses**
 
