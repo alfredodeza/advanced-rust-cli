@@ -10,7 +10,7 @@ In this practice lab, you will build a command line tool that will generate a ti
 
 **Steps:**
 
-1. Create a new repository in your acconut for your Rust project. Use the [Rust template repository](https://github.com/alfredodeza/rust-template) to quickly generate one for your own account. Use this link to [create it in one step](https://github.com/alfredodeza/rust-template/generate).
+1. Create a new repository in your account for your Rust project. Use the [Rust template repository](https://github.com/alfredodeza/rust-template) to quickly generate one for your own account. Use this link to [create it in one step](https://github.com/alfredodeza/rust-template/generate).
 1. Use Clap with the `derive` feature. Refer to the [derive example](./examples/2-complex) as a guide.
 1. Add a single argument to your tool. The argument should be a number of seconds to add to the current time. If no argument is provided, the tool should default to adding 0 seconds to the current time.
 
